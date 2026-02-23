@@ -1,6 +1,6 @@
 # lgtm-apm
 
-**One-line OpenTelemetry APM for the LGTM stack** (Loki, Grafana, Tempo, Mimir). Point your Node.js app at an OTLP collector URL (e.g. Grafana Alloy) and get automatic tracing—and optional metrics and logs—with zero SSM or vendor lock-in.
+**One-line OpenTelemetry APM for the LGTM stack** (Loki, Grafana, Tempo, Mimir). Point your Node.js app at an OTLP collector URL (e.g. Grafana Alloy) and get automatic tracing—and optional metrics and logs—with no vendor lock-in.
 
 - **Install** → **Import** → **Call `initAPM({ collectorUrl, serviceName })`** → APM is on.
 
