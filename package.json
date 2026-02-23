@@ -1,0 +1,53 @@
+{
+  "name": "lgtm-apm",
+  "version": "1.0.0",
+  "description": "One-line OpenTelemetry APM for LGTM (Loki, Grafana, Tempo, Mimir). Point at your Alloy/OTLP collector URL and get traces, optional metrics & logs.",
+  "main": "dist/index.js",
+  "exports": {
+    ".": { "require": "./dist/index.js" },
+    "./register.js": { "require": "./dist/register.js" }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "node build.js",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "opentelemetry",
+    "apm",
+    "lgtm",
+    "grafana",
+    "tempo",
+    "alloy",
+    "otlp",
+    "tracing",
+    "instrumentation"
+  ],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@opentelemetry/api": "^1.9.0",
+    "@opentelemetry/auto-instrumentations-node": "^0.52.0",
+    "@opentelemetry/exporter-metrics-otlp-http": "^0.52.0",
+    "@opentelemetry/exporter-trace-otlp-http": "^0.52.0",
+    "@opentelemetry/resources": "^1.24.0",
+    "@opentelemetry/sdk-logs": "^0.52.0",
+    "@opentelemetry/sdk-metrics": "^1.24.0",
+    "@opentelemetry/sdk-node": "^0.52.0",
+    "@opentelemetry/sdk-trace-base": "^1.24.0",
+    "@opentelemetry/semantic-conventions": "^1.24.0"
+  },
+  "optionalDependencies": {
+    "@opentelemetry/exporter-logs-otlp-http": "^0.52.0",
+    "@opentelemetry/api-logs": "^0.52.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.0"
+  }
+}
